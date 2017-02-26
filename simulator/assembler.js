@@ -1679,7 +1679,7 @@ function SimulatorWidget(node) {
       text += "    A=$" + num2hex(regA) + "    X=$" + num2hex(regX) + "    Y=$" + num2hex(regY);
       text += "    ";
       for (var i = 7; i >=0; i--) {
-        html += regP >> i & 1;
+        text += regP >> i & 1;
       }
       message(text);
     }
