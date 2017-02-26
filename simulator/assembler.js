@@ -1671,8 +1671,19 @@ function SimulatorWidget(node) {
         execute(true);
       //}
       updateDebugInfo();
+      outputStatus();
     }
 
+    function outputStatus() {
+      var text = "PC=$" + num2hex(regPC) + "    SP=$" + num2dex(regSP);
+      text += "    A=$" + num2hex(regA) + "    X=$" + num2hex(regX) + "    Y=$" + num2hex(regY);
+      text += "    ";
+      for (var i = 7; i >=0; i--) {
+        html += regP >> i & 1;
+      }
+      message(text);
+    }
+    
     function updateDebugInfo() {
       var html = "A=$" + num2hex(regA) + " X=$" + num2hex(regX) + " Y=$" + num2hex(regY) + "<br />";
       html += "SP=$" + num2hex(regSP) + " PC=$" + addr2hex(regPC);
