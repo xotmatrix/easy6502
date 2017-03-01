@@ -1675,8 +1675,8 @@ function SimulatorWidget(node) {
     }
 
     function outputStatus() {
-      var text = "PC=$" + addr2hex(regPC) + "    SP=$" + num2hex(regSP);
-      text += "    A=$" + num2hex(regA) + "    X=$" + num2hex(regX) + "    Y=$" + num2hex(regY);
+      var text = "PC=$" + addr2hex(regPC) + "   SP=$" + num2hex(regSP);
+      text += "    A=$" + num2hex(regA) + "   X=$" + num2hex(regX) + "   Y=$" + num2hex(regY);
       text += "    ";
       for (var i = 7; i >=0; i--) {
         text += regP >> i & 1;
